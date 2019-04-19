@@ -1,0 +1,12 @@
+<table>
+  <tr *ngFor="let fd of food">
+    <input type="checkbox" [(ngModel)]="fd.selected" value="fd.name">
+    <td>{{fd.name}}</td>
+    <td>{{fd.price|currency:'SGD'}} </td>
+  </tr>
+</table>
+<button type="button" (click)="confirm()">
+  Confirm
+</button>
+
+<span style="color:red;"><br><br>{{msg}}</span>

@@ -1,0 +1,15 @@
+<table>
+  <ng-container *ngFor="let fd of food">
+    <tr *ngIf="fd.selected">
+      <td>{{fd.name}}</td>
+      <td>{{fd.price|currency:'SGD'}} </td>
+    </tr>
+  </ng-container>
+</table>
+<label>-------------------------------</label><br>
+<label>Total Price :</label> {{totalprice|currency:'SGD'}}<br>
+<label>-------------------------------</label>
+<br>
+<button type="button" (click)="back()">
+  Back
+</button>
